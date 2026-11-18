@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "test": "node --test test/",
+    "test": "node --test \"test/*.test.js\"",
     "fixture": "node test/fixtures/make-mpesa-fixture.mjs && node test/fixtures/make-gcash-fixture.mjs",
     "vendor": "node dev/vendor.mjs",
     "dev": "node dev/serve.mjs --port 8811",
