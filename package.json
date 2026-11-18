@@ -1,0 +1,27 @@
+{
+  "name": "statement-reader",
+  "version": "0.1.0",
+  "description": "Turn mobile-money statement PDFs into clean rows (CSV). Runs fully in the browser; nothing is uploaded.",
+  "type": "module",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test test/",
+    "fixture": "node test/fixtures/make-mpesa-fixture.mjs && node test/fixtures/make-gcash-fixture.mjs",
+    "vendor": "node dev/vendor.mjs",
+    "dev": "node dev/serve.mjs --port 8811",
+    "build": "node dev/build.mjs"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^4.10.38"
+  },
+  "devDependencies": {
+    "pdf-lib": "^1.17.1"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SakredStudio/statement-reader.git"
+  },
+  "author": "17899181 CANADA INC. (Sakred Studio)"
+}

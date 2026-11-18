@@ -1,0 +1,5 @@
+node_modules/
+web/vendor/
+dist/
+# Sample PDFs are generated (npm run fixture). Never commit a real statement.
+*.pdf

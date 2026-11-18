@@ -1,0 +1,40 @@
+name: A statement read wrongly or was refused
+description: Tell us what went wrong. Do NOT attach or paste a real statement.
+labels: [layout]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never attach, paste or screenshot a real statement.** It holds names, phone numbers and balances.
+        Describe the problem in words. If an example row is needed, change every name, number and amount first.
+  - type: dropdown
+    id: wallet
+    attributes:
+      label: Which wallet?
+      options: [M-Pesa (Kenya), GCash (Philippines), Another wallet]
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Where did the statement come from?
+      options: [Sent by e-mail, Downloaded in the app, Other or not sure]
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: For example the message the page showed, how many balance checks failed, or which column looked wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: headers
+    attributes:
+      label: Column headings on the statement
+      description: Type the headings of the transaction table, left to right. Headings only, no rows.
+  - type: checkboxes
+    id: private
+    attributes:
+      label: Privacy
+      options:
+        - label: I have not attached or pasted a real statement, and any example row has made-up values.
+          required: true
