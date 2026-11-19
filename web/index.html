@@ -63,6 +63,9 @@
   footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
   footer p { margin: 0 0 8px; }
   footer a { color: var(--accent); }
+  .pro { margin-top: 40px; background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 14px 16px; }
+  .pro p { margin: 0 0 6px; }
+  .pro a { color: var(--accent); font-weight: 600; }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -107,6 +110,11 @@
       </table>
     </div>
   </section>
+  <!-- Paid plan for accountants. Hidden until PRO_URL is set in app.js. -->
+  <aside class="pro" id="pro" aria-label="For accountants" hidden>
+    <p><strong>For accountants: Statement Reader Pro.</strong> Read many statements at once, sort the rows into your categories, and download files QuickBooks Online and Xero can import. Still read on your device.</p>
+    <p><a id="pro-link" href="#" rel="noopener">See Statement Reader Pro</a></p>
+  </aside>
   <footer>
     <p>Did a statement read wrongly or get refused? <a href="https://github.com/SakredStudio/statement-reader/issues" rel="noopener">Report it here</a>. Describe what went wrong; never attach or paste a real statement.</p>
     <p>Free and open source (MIT): <a href="https://github.com/SakredStudio/statement-reader" rel="noopener">source code</a>. Always check the result against your statement before relying on it.</p>

@@ -4,6 +4,14 @@ import { parsePdf, toCsv, UnknownStatementError } from '../src/index.js';
 pdfjs.GlobalWorkerOptions.workerSrc = new URL('./vendor/pdf.worker.min.mjs', import.meta.url).href;
 
 const $ = (id) => document.getElementById(id);
+
+// Statement Reader Pro, the paid plan for accountants. The "For accountants" card stays hidden while this is empty;
+// set it to the Pro page's https address to show it.
+const PRO_URL = '';
+if (/^https:\/\/[^\s"'<>]+$/.test(PRO_URL)) {
+  $('pro-link').href = PRO_URL;
+  $('pro').hidden = false;
+}
 const money = new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const TYPE_LABELS = {
   send_money: 'Send money', received_money: 'Received', paybill: 'Pay bill', buy_goods: 'Buy goods',
