@@ -38,6 +38,9 @@ export async function build(outDir = join(root, 'dist'), id = buildId()) {
   await writeFile(join(out, 'samples', 'mpesa-ke-sample.pdf'), await mpesa.buildFixture());
   await writeFile(join(out, 'samples', 'gcash-ph-sample.pdf'), await gcash.buildFixture());
 
+  // Icons and the link-preview image (rarely change; plain URLs are fine for images).
+  await cp(join(root, 'web', 'icons'), join(out, 'icons'), { recursive: true });
+
   let html = await readFile(join(root, 'web', 'index.html'), 'utf8');
   const before = html;
   html = html

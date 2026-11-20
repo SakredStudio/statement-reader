@@ -1,5 +1,7 @@
 # Statement Reader
 
+![Statement Reader](docs/banner.jpg)
+
 Turns mobile-money statement PDFs into clean rows you can open in Excel or import into accounting software. The file is read in your browser; nothing is uploaded.
 
 | Wallet | Statement | Status |
