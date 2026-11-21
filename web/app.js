@@ -7,7 +7,7 @@ const $ = (id) => document.getElementById(id);
 
 // Statement Reader Pro, the paid plan for accountants. The "For accountants" card stays hidden while this is empty;
 // set it to the Pro page's https address to show it.
-const PRO_URL = '';
+const PRO_URL = 'https://statements.sakredstudio.ca/';
 if (/^https:\/\/[^\s"'<>]+$/.test(PRO_URL)) {
   $('pro-link').href = PRO_URL;
   $('pro').hidden = false;
